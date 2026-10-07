@@ -1,6 +1,6 @@
 # SPEC 01 — Mapa básico de Google Maps
 
-> **Status:** Draft
+> **Status:** Implemented
 > **Depends on:** —
 > **Date:** 2026-10-06
 > **Objective:** Renderizar un mapa de Google Maps con un marcador fijo en Buenos Aires dentro de `src/components/map.tsx`, mostrado en `HomePage`.
@@ -39,18 +39,18 @@ const DEFAULT_ZOOM = 12;
 ```
 
 ```dotenv
-# .env.example (versionado)
+# .env.template (versionado)
 VITE_GOOGLE_MAPS_API_KEY=
 VITE_GOOGLE_MAPS_MAP_ID=
 ```
 
-La key real va en `.env.local`, que ya está ignorado por la regla `*.local` del `.gitignore`.
+La key real va en `.env`, que ya está ignorado por la regla `.env` del `.gitignore`.
 
 ## Implementation plan
 
 1. Instalar la dependencia: `pnpm add @vis.gl/react-google-maps`.
-2. Crear `.env.example` con las dos variables vacías.
-3. Crear `.env.local` con la key real (paso manual, no versionado).
+2. Crear `.env.template` con las dos variables vacías.
+3. Crear `.env` con la key real (paso manual, no versionado).
 4. En `src/main.tsx`, envolver `<RouterProvider>` con `<APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? ""}>`.
 5. En `src/components/map.tsx`:
    - Importar `Map as GoogleMap` y `AdvancedMarker` (alias para evitar choque con el componente `Map`).
@@ -68,7 +68,7 @@ La key real va en `.env.local`, que ya está ignorado por la regla `*.local` del
 - [ ] Hay un marcador visible en el centro.
 - [ ] Se puede hacer zoom (botones o rueda) y arrastrar el mapa.
 - [ ] Sin la variable de key, el contenedor muestra el mensaje de aviso y la página no se rompe.
-- [ ] `.env.local` no aparece en `git status`.
+- [ ] `.env` no aparece en `git status`.
 - [ ] Con key válida no hay errores de Google Maps en la consola.
 
 ## Decisions
