@@ -1,6 +1,6 @@
 # SPEC 01 — Mapa básico de Google Maps
 
-> **Status:** Draft
+> **Status:** Approved
 > **Depends on:** —
 > **Date:** 2026-10-06
 > **Objective:** Renderizar un mapa de Google Maps con un marcador fijo en Buenos Aires dentro de `src/components/map.tsx`, mostrado en `HomePage`.
