@@ -1,6 +1,6 @@
 # SPEC 04 — Instalar Storybook y crear el story de Button
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 02
 > **Date:** 2026-10-07
 > **Objective:** Instalar Storybook 10 con `@storybook/react-vite` y crear el story de `Button` en su carpeta.
@@ -9,8 +9,8 @@
 
 **In:**
 
-- Instalación con `pnpm` de Storybook 10: `storybook`, `@storybook/react-vite` y `@storybook/addon-essentials`, en versiones compatibles con React 19, Vite 8 y Tailwind v4.
-- Configuración `.storybook/main.ts` con framework `@storybook/react-vite`, `stories` en `../src/**/*.stories.tsx`, addon `essentials` y alias `@/` hacia `./src`.
+- Instalación con `pnpm` de Storybook 10: `storybook`, `@storybook/react-vite` y `@storybook/addon-addon-docs`, en versiones compatibles con React 19, Vite 8 y Tailwind v4.
+- Configuración `.storybook/main.ts` con framework `@storybook/react-vite`, `stories` en `../src/**/*.stories.tsx`, addon `addon-docs` y alias `@/` hacia `./src`.
 - Configuración `.storybook/preview.ts` que importa `../src/index.css` para que Tailwind v4 se vea igual que en la app.
 - Scripts en `package.json`: `storybook` (dev en puerto 6006) y `build-storybook`.
 - Story `src/components/ui/button/button.stories.tsx` con `tags: ['autodocs']`.
@@ -42,8 +42,8 @@ export type ButtonProps = {
 
 ## Implementation plan
 
-1. Instalar dependencias de desarrollo con `pnpm add -D` (`storybook`, `@storybook/react-vite`, `@storybook/addon-essentials`).
-2. Crear `.storybook/main.ts` con framework, glob de stories, addon essentials y alias `@/`.
+1. Instalar dependencias de desarrollo con `pnpm add -D` (`storybook`, `@storybook/react-vite`, `@storybook/addon-addon-docs`).
+2. Crear `.storybook/main.ts` con framework, glob de stories, addon addon-docs y alias `@/`.
 3. Crear `.storybook/preview.ts` con el import de `../src/index.css`.
 4. Agregar los scripts `storybook` y `build-storybook` en `package.json`.
 5. Crear `src/components/ui/button/button.stories.tsx` con `Meta<typeof Button>`, `tags: ['autodocs']` y las stories `Primary`, `Outline` y `AsLink`.
@@ -68,7 +68,7 @@ export type ButtonProps = {
 - **Yes:** instalación con `pnpm`. Es coherente con el `pnpm-lock.yaml` existente.
 - **Yes:** story junto al componente en `src/components/ui/button/button.stories.tsx`. Es la convención fijada en SPEC 02.
 - **Yes:** casos `Primary`, `Outline` y `AsLink`. Cubren las dos variantes y la rama `href` de `button.tsx`.
-- **Yes:** addon `essentials` con `tags: ['autodocs']`. Da Controls y Docs sin configuración extra.
+- **Yes:** addon `addon-docs` con `tags: ['autodocs']`. Da Controls y Docs sin configuración extra.
 - **Yes:** importar `src/index.css` en `preview.ts`. Sin esto Tailwind v4 se ve distinto que en la app.
 - **Yes:** reutilizar el alias `@/` en `.storybook/main.ts`. El componente ya lo usa en su import de tipos.
 - **No:** addon a11y, test-runner, Vitest o Chromatic en esta spec. Van en specs propias si llegan.
