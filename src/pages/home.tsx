@@ -6,6 +6,7 @@ import { BigPicture } from "@/components/big-picture";
 import { Specs } from "@/components/specs";
 import { Testimonial } from "@/components/testimonial";
 import { HowTo } from "@/components/how-to";
+import { Location } from "@/components/location";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -20,6 +21,7 @@ export const HomePage = () => (
       <Specs />
       <Testimonial />
       <HowTo />
+      <Location />
       <Contact />
     </main>
     <Footer />
