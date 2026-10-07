@@ -1,10 +1,27 @@
-import { Map } from '../components/map';
+import { Navbar } from "@/components/navbar";
+import { Hero } from "@/components/hero";
+import { TrustedBy } from "@/components/trusted-by";
+import { Benefits } from "@/components/benefits";
+import { BigPicture } from "@/components/big-picture";
+import { Specs } from "@/components/specs";
+import { Testimonial } from "@/components/testimonial";
+import { HowTo } from "@/components/how-to";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 
-export const HomePage = () => {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Map />
-    </>
-  );
-};
+export const HomePage = () => (
+  <>
+    <Navbar />
+    <main>
+      <Hero />
+      <TrustedBy />
+      <Benefits />
+      <BigPicture />
+      <Specs />
+      <Testimonial />
+      <HowTo />
+      <Contact />
+    </main>
+    <Footer />
+  </>
+);
