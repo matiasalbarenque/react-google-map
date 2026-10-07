@@ -1,3 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 36" width="59" height="36" role="img" aria-label="Area">
-  <text x="0" y="27" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="500" fill="#000000">Area</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 115" width="120" height="69" role="img" aria-label="Hojas verdes">
+  <!-- Hoja pequeña - verde claro -->
+  <path
+    fill="#8BC53F"
+    d="M8 62 C 35 50, 65 44, 92 58 C 90 70, 85 84, 70 96 C 58 105, 40 103, 28 94 C 20 87, 13 74, 8 62 Z"
+  />
+  <!-- Hoja grande - verde oscuro -->
+  <path
+    fill="#0A8A32"
+    d="M97 106 C 90 75, 98 40, 132 18 C 152 6, 175 4, 196 4 C 186 20, 178 32, 170 46 C 160 63, 148 82, 130 93 C 118 101, 104 106, 97 106 Z"
+  />
+  <!-- Nervadura hoja pequeña -->
+  <path
+    d="M38 68 C 54 68, 70 75, 86 88"
+    fill="none"
+    stroke="white"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <!-- Nervadura hoja grande -->
+  <path
+    d="M100 108 C 115 84, 130 60, 162 36"
+    fill="none"
+    stroke="white"
+    stroke-width="5.5"
+    stroke-linecap="round"
+  />
 </svg>
