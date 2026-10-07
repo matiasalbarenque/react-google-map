@@ -12,6 +12,12 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/spec-impl/SKILL.md",
       "computedHash": "072b2551ffcc78286a081141f5b549fb52d557345d4afd14902c30ebc35ac1a9"
+    },
+    "storybook": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "storybook/SKILL.md",
+      "computedHash": "8157be22c1717dd815297bc14eae65a85e8562e3666f7f3b109a36add72b03a0"
     }
   }
 }
