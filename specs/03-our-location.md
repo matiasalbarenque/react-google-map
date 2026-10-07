@@ -32,15 +32,15 @@ Esta feature no introduce estructuras de datos nuevas. Reutiliza el modelo de SP
 ```ts
 // src/typings/components/location.ts
 export type LocationProps = {
-  title?: string;
-  ctaLabel?: string;
-  ctaHref?: string;
+  title: string;
+  ctaLabel: string;
+  ctaHref: string;
 };
 ```
 
 ```ts
 // src/components/location/location.data.ts
-export const LOCATION_DEFAULTS: Required<LocationProps> = {
+export const LOCATION_DEFAULTS: LocationProps = {
   title: "Our Location",
   ctaLabel: "Get Started",
   ctaHref: "#contact",
