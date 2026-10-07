@@ -18,13 +18,10 @@ const STATUS_LABELS: Record<FeatureStatus, string> = {
   no: "Not included",
 };
 
-export const Specs = ({
-  label = SPECS_DEFAULTS.label,
-  title = SPECS_DEFAULTS.title,
-  description = SPECS_DEFAULTS.description,
-  ctaLabel = SPECS_DEFAULTS.ctaLabel,
-  competitors = SPECS_DEFAULTS.competitors,
-}: SpecsProps) => (
+export const Specs = (props: SpecsProps) => {
+  const { label = SPECS_DEFAULTS.label, title = SPECS_DEFAULTS.title, description = SPECS_DEFAULTS.description, ctaLabel = SPECS_DEFAULTS.ctaLabel, competitors = SPECS_DEFAULTS.competitors } = props;
+
+  return (
   <section
     id="specifications"
     aria-labelledby="specs-heading"
@@ -80,4 +77,5 @@ export const Specs = ({
       </div>
     </div>
   </section>
-);
+  );
+};

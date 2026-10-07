@@ -1,12 +1,10 @@
 import type { FooterProps } from "@/typings/components/footer";
 import { FOOTER_DEFAULTS } from "./footer.data";
 
-export const Footer = ({
-  logo = FOOTER_DEFAULTS.logo,
-  links = FOOTER_DEFAULTS.links,
-  year = FOOTER_DEFAULTS.year,
-  copyright = FOOTER_DEFAULTS.copyright,
-}: FooterProps) => (
+export const Footer = (props: FooterProps) => {
+  const { logo = FOOTER_DEFAULTS.logo, links = FOOTER_DEFAULTS.links, year = FOOTER_DEFAULTS.year, copyright = FOOTER_DEFAULTS.copyright } = props;
+
+  return (
   <footer className="px-6 pt-12 pb-6 md:px-10 xl:px-0">
     <div className="mx-auto max-w-[1200px]">
       <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-[27px] gap-y-3">
@@ -32,4 +30,5 @@ export const Footer = ({
       </div>
     </div>
   </footer>
-);
+  );
+};

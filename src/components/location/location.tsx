@@ -2,9 +2,10 @@ import { Map } from "@/components/map";
 import type { LocationProps } from "@/typings/components/location";
 import { LOCATION_DEFAULTS } from "./location.data";
 
-export const Location = ({
-  title = LOCATION_DEFAULTS.title,
-}: LocationProps) => (
+export const Location = (props: LocationProps) => {
+  const { title = LOCATION_DEFAULTS.title } = props;
+
+  return (
   <section className="scroll-mt-4 px-6 md:px-10 xl:px-0">
     <div className="mx-auto max-w-[1200px] py-16 md:py-20">
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -18,4 +19,5 @@ export const Location = ({
       </div>
     </div>
   </section>
-);
+  );
+};

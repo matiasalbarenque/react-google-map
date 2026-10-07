@@ -2,13 +2,10 @@ import { Button } from "@/components/ui/button";
 import type { BigPictureProps } from "@/typings/components/big-picture";
 import { BIG_PICTURE_DEFAULTS } from "./big-picture.data";
 
-export const BigPicture = ({
-  image = BIG_PICTURE_DEFAULTS.image,
-  title = BIG_PICTURE_DEFAULTS.title,
-  description = BIG_PICTURE_DEFAULTS.description,
-  steps = BIG_PICTURE_DEFAULTS.steps,
-  ctaLabel = BIG_PICTURE_DEFAULTS.ctaLabel,
-}: BigPictureProps) => (
+export const BigPicture = (props: BigPictureProps) => {
+  const { image = BIG_PICTURE_DEFAULTS.image, title = BIG_PICTURE_DEFAULTS.title, description = BIG_PICTURE_DEFAULTS.description, steps = BIG_PICTURE_DEFAULTS.steps, ctaLabel = BIG_PICTURE_DEFAULTS.ctaLabel } = props;
+
+  return (
   <section className="px-6 py-20 md:px-10 md:py-24 xl:px-0 xl:py-28">
     <div className="mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-[1fr_590px] lg:gap-16">
       <div>
@@ -46,4 +43,5 @@ export const BigPicture = ({
       </div>
     </div>
   </section>
-);
+  );
+};

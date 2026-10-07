@@ -1,12 +1,10 @@
 import type { TestimonialProps } from "@/typings/components/testimonial";
 import { TESTIMONIAL_DEFAULTS } from "./testimonial.data";
 
-export const Testimonial = ({
-  image = TESTIMONIAL_DEFAULTS.image,
-  quote = TESTIMONIAL_DEFAULTS.quote,
-  author = TESTIMONIAL_DEFAULTS.author,
-  role = TESTIMONIAL_DEFAULTS.role,
-}: TestimonialProps) => (
+export const Testimonial = (props: TestimonialProps) => {
+  const { image = TESTIMONIAL_DEFAULTS.image, quote = TESTIMONIAL_DEFAULTS.quote, author = TESTIMONIAL_DEFAULTS.author, role = TESTIMONIAL_DEFAULTS.role } = props;
+
+  return (
   <section className="px-6 pb-20 md:px-10 md:pb-24 xl:px-0 xl:pb-28">
     <div className="mx-auto grid max-w-[1200px] gap-6 lg:grid-cols-2 lg:gap-10">
       <div className="overflow-hidden rounded-[30px]">
@@ -28,4 +26,5 @@ export const Testimonial = ({
       </figure>
     </div>
   </section>
-);
+  );
+};

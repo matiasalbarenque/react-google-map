@@ -1,10 +1,10 @@
 import type { TrustedByProps } from "@/typings/components/trusted-by";
 import { TRUSTED_BY_DEFAULTS } from "./trusted-by.data";
 
-export const TrustedBy = ({
-  label = TRUSTED_BY_DEFAULTS.label,
-  logos = TRUSTED_BY_DEFAULTS.logos,
-}: TrustedByProps) => (
+export const TrustedBy = (props: TrustedByProps) => {
+  const { label = TRUSTED_BY_DEFAULTS.label, logos = TRUSTED_BY_DEFAULTS.logos } = props;
+
+  return (
   <section aria-label={label} className="px-6 py-14 md:px-10 xl:px-0">
     <div className="mx-auto max-w-[1200px]">
       <p className="text-center text-[15px] text-slate md:text-left">{label}</p>
@@ -21,4 +21,5 @@ export const TrustedBy = ({
       </div>
     </div>
   </section>
-);
+  );
+};

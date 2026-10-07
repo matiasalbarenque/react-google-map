@@ -2,12 +2,10 @@ import { SectionLabel } from "@/components/ui/section-label";
 import type { BenefitsProps } from "@/typings/components/benefits";
 import { BENEFITS_DEFAULTS } from "./benefits.data";
 
-export const Benefits = ({
-  label = BENEFITS_DEFAULTS.label,
-  title = BENEFITS_DEFAULTS.title,
-  subtitle = BENEFITS_DEFAULTS.subtitle,
-  items = BENEFITS_DEFAULTS.items,
-}: BenefitsProps) => (
+export const Benefits = (props: BenefitsProps) => {
+  const { label = BENEFITS_DEFAULTS.label, title = BENEFITS_DEFAULTS.title, subtitle = BENEFITS_DEFAULTS.subtitle, items = BENEFITS_DEFAULTS.items } = props;
+
+  return (
   <section id="benefits" className="scroll-mt-4 px-6 py-20 md:px-10 md:py-24 xl:px-0 xl:py-28">
     <div className="mx-auto max-w-[1200px]">
       <SectionLabel>{label}</SectionLabel>
@@ -27,4 +25,5 @@ export const Benefits = ({
       </div>
     </div>
   </section>
-);
+  );
+};

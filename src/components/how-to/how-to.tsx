@@ -2,12 +2,10 @@ import { Button } from "@/components/ui/button";
 import type { HowToProps } from "@/typings/components/how-to";
 import { HOW_TO_DEFAULTS } from "./how-to.data";
 
-export const HowTo = ({
-  title = HOW_TO_DEFAULTS.title,
-  ctaLabel = HOW_TO_DEFAULTS.ctaLabel,
-  steps = HOW_TO_DEFAULTS.steps,
-  image = HOW_TO_DEFAULTS.image,
-}: HowToProps) => (
+export const HowTo = (props: HowToProps) => {
+  const { title = HOW_TO_DEFAULTS.title, ctaLabel = HOW_TO_DEFAULTS.ctaLabel, steps = HOW_TO_DEFAULTS.steps, image = HOW_TO_DEFAULTS.image } = props;
+
+  return (
   <section id="how-to" className="scroll-mt-4 px-6 md:px-10 xl:px-0">
     <div className="mx-auto max-w-[1200px]">
       <div className="border-y border-mist py-16 md:py-20">
@@ -41,4 +39,5 @@ export const HowTo = ({
       </div>
     </div>
   </section>
-);
+  );
+};

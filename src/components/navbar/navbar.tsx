@@ -4,12 +4,8 @@ import { Button } from "@/components/ui/button";
 import type { NavbarProps } from "@/typings/components/navbar";
 import { NAVBAR_DEFAULTS } from "./navbar.data";
 
-export const Navbar = ({
-  logo = NAVBAR_DEFAULTS.logo,
-  links = NAVBAR_DEFAULTS.links,
-  ctaLabel = NAVBAR_DEFAULTS.ctaLabel,
-  ctaHref = NAVBAR_DEFAULTS.ctaHref,
-}: NavbarProps) => {
+export const Navbar = (props: NavbarProps) => {
+  const { logo = NAVBAR_DEFAULTS.logo, links = NAVBAR_DEFAULTS.links, ctaLabel = NAVBAR_DEFAULTS.ctaLabel, ctaHref = NAVBAR_DEFAULTS.ctaHref } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -1,11 +1,7 @@
 import type { ButtonProps } from "@/typings/components/ui/button";
 
-export const Button = ({
-  children,
-  variant = "primary",
-  href,
-  className = "",
-}: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+  const { children, variant = "primary", href, className = "" } = props;
   const classes = [
     "inline-flex items-center justify-center rounded-full border px-6 py-3 text-center text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#485C11]",
     variant === "primary"
