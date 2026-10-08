@@ -5,8 +5,9 @@
 - `pnpm dev` — Vite dev server
 - `pnpm build` — typecheck + build (`tsc -b && vite build`); this is the typecheck, there is no separate script
 - `pnpm lint` — `oxlint` (config in `.oxlintrc.json`; ignores `dist/**`, `storybook-static/**`)
+- `pnpm format` / `pnpm format:check` — format / check with `oxfmt` (config in `.oxfmtrc.json`; respects `.gitignore`)
 - `pnpm storybook` / `pnpm build-storybook` — Storybook 10 dev / static build
-- No test runner, no CI workflows, no formatter config in repo.
+- No test runner or CI workflows in repo.
 
 ## Setup
 

@@ -1,1 +1,1 @@
-export { Specs } from "./specs";
+export { Specs } from './specs';

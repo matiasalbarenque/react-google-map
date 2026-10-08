@@ -31,7 +31,7 @@ Esta feature no introduce estructuras de datos nuevas. Reutiliza el modelo de SP
 
 ```ts
 // src/typings/components/ui/button.ts
-export type ButtonVariant = "primary" | "outline";
+export type ButtonVariant = 'primary' | 'outline';
 export type ButtonProps = {
   children: React.ReactNode;
   variant?: ButtonVariant;
@@ -76,11 +76,11 @@ export type ButtonProps = {
 
 ## Risks
 
-| Risk | Mitigation |
-| --- | --- |
+| Risk                                                    | Mitigation                                                                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Versión de Storybook incompatible con React 19 o Vite 8 | Fijar las versiones instaladas y verificar `pnpm storybook` y `pnpm build-storybook` en el paso final. |
-| Tailwind v4 no se aplica dentro del canvas | `preview.ts` importa `src/index.css`; la aceptación exige estilos iguales a la app. |
-| El alias `@/` no resuelve en Storybook | Se configura en `.storybook/main.ts`; el criterio de `build-storybook` lo detecta. |
+| Tailwind v4 no se aplica dentro del canvas              | `preview.ts` importa `src/index.css`; la aceptación exige estilos iguales a la app.                    |
+| El alias `@/` no resuelve en Storybook                  | Se configura en `.storybook/main.ts`; el criterio de `build-storybook` lo detecta.                     |
 
 ## What is **not** in this spec
 

@@ -55,10 +55,10 @@ Cada paso deja Storybook funcional. El único archivo de implementación que cam
 
 ## Risks
 
-| Risk | Mitigation |
-| --- | --- |
-| Cambiar `href` o el texto desde Controls altera el elemento esperado por el test. | Verificar con los args predeterminados y restablecerlos antes de repetir. |
-| Confundir un build exitoso con una prueba ejecutada. | Comprobar explícitamente el resultado de `play` en Interactions; el build no ejecuta estas aserciones. |
+| Risk                                                                              | Mitigation                                                                                             |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Cambiar `href` o el texto desde Controls altera el elemento esperado por el test. | Verificar con los args predeterminados y restablecerlos antes de repetir.                              |
+| Confundir un build exitoso con una prueba ejecutada.                              | Comprobar explícitamente el resultado de `play` en Interactions; el build no ejecuta estas aserciones. |
 
 ## What is **not** in this spec
 

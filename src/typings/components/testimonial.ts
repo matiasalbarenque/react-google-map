@@ -1,4 +1,4 @@
-import type { ImageAsset } from "./shared";
+import type { ImageAsset } from './shared';
 
 export type TestimonialProps = {
   image?: ImageAsset;

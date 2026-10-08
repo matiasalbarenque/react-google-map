@@ -1,1 +1,1 @@
-export { BigPicture } from "./big-picture";
+export { BigPicture } from './big-picture';

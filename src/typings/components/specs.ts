@@ -1,4 +1,4 @@
-export type FeatureStatus = "yes" | "partial" | "no";
+export type FeatureStatus = 'yes' | 'partial' | 'no';
 export type Feature = { label: string; status: FeatureStatus };
 export type Competitor = {
   name: string;

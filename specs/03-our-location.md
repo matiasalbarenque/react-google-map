@@ -41,9 +41,9 @@ export type LocationProps = {
 ```ts
 // src/components/location/location.data.ts
 export const LOCATION_DEFAULTS: LocationProps = {
-  title: "Our Location",
-  ctaLabel: "Get Started",
-  ctaHref: "#contact",
+  title: 'Our Location',
+  ctaLabel: 'Get Started',
+  ctaHref: '#contact',
 };
 ```
 

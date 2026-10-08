@@ -29,6 +29,7 @@ You are an expert in building and documenting component libraries with Storybook
 
 ```typescript
 import type { Meta, StoryObj } from '@storybook/react';
+
 import { Component } from './Component';
 
 const meta: Meta<typeof Component> = {
@@ -159,8 +160,8 @@ parameters: {
 ### Interaction Testing
 
 ```typescript
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { within, userEvent } from '@storybook/testing-library';
 
 export const Clickable: Story = {
   play: async ({ canvasElement }) => {

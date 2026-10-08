@@ -86,11 +86,11 @@ La key real va en `.env`, que ya está ignorado por la regla `.env` del `.gitign
 
 ## Risks
 
-| Risk                                                                 | Mitigation                                                                                          |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Sin key, `APIProvider` intenta cargar el script y genera error en consola | `Map` no renderiza `<GoogleMap>` y muestra el aviso; el error de consola se acepta en ese caso.     |
-| API key expuesta en el bundle del cliente                            | Es inherente a Maps JS; restringir la key por HTTP referrer en Google Cloud Console.                |
-| `DEMO_MAP_ID` no apto para producción                                | Configurar `VITE_GOOGLE_MAPS_MAP_ID` cuando sea necesario.                                          |
+| Risk                                                                      | Mitigation                                                                                      |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Sin key, `APIProvider` intenta cargar el script y genera error en consola | `Map` no renderiza `<GoogleMap>` y muestra el aviso; el error de consola se acepta en ese caso. |
+| API key expuesta en el bundle del cliente                                 | Es inherente a Maps JS; restringir la key por HTTP referrer en Google Cloud Console.            |
+| `DEMO_MAP_ID` no apto para producción                                     | Configurar `VITE_GOOGLE_MAPS_MAP_ID` cuando sea necesario.                                      |
 
 ## What is **not** in this spec
 

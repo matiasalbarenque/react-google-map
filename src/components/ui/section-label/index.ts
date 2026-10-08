@@ -1,1 +1,1 @@
-export { SectionLabel } from "./section-label";
+export { SectionLabel } from './section-label';

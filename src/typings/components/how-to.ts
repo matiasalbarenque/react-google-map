@@ -1,4 +1,4 @@
-import type { ImageAsset, Step } from "./shared";
+import type { ImageAsset, Step } from './shared';
 
 export type HowToProps = {
   title?: string;

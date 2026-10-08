@@ -110,7 +110,7 @@ export type NavLink = { label: string; href: string };
 export type Step = { number: string; title: string; description?: string };
 
 // typings/components/ui/button.ts
-export type ButtonVariant = "primary" | "outline";
+export type ButtonVariant = 'primary' | 'outline';
 export type ButtonProps = {
   children: React.ReactNode;
   variant?: ButtonVariant;
@@ -119,15 +119,27 @@ export type ButtonProps = {
 };
 
 // typings/components/ui/section-label.ts
-export type SectionLabelProps = { children: React.ReactNode; className?: string };
+export type SectionLabelProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
 // typings/components/map.ts
 export type LatLng = { lat: number; lng: number };
 export type MapMarker = { id: string; position: LatLng };
-export type MapProps = { center?: LatLng; zoom?: number; markers?: MapMarker[] };
+export type MapProps = {
+  center?: LatLng;
+  zoom?: number;
+  markers?: MapMarker[];
+};
 
 // typings/components/navbar.ts
-export type NavbarProps = { logo?: ImageAsset; links?: NavLink[]; ctaLabel?: string; ctaHref?: string };
+export type NavbarProps = {
+  logo?: ImageAsset;
+  links?: NavLink[];
+  ctaLabel?: string;
+  ctaHref?: string;
+};
 
 // typings/components/hero.ts
 export type HeroProps = { title?: string; image?: ImageAsset };
@@ -136,8 +148,18 @@ export type HeroProps = { title?: string; image?: ImageAsset };
 export type TrustedByProps = { label?: string; logos?: ImageAsset[] };
 
 // typings/components/benefits.ts
-export type Benefit = { id: string; icon: ImageAsset; title: string; description: string };
-export type BenefitsProps = { label?: string; title?: string; subtitle?: string; items?: Benefit[] };
+export type Benefit = {
+  id: string;
+  icon: ImageAsset;
+  title: string;
+  description: string;
+};
+export type BenefitsProps = {
+  label?: string;
+  title?: string;
+  subtitle?: string;
+  items?: Benefit[];
+};
 
 // typings/components/big-picture.ts
 export type BigPictureProps = {
@@ -149,9 +171,13 @@ export type BigPictureProps = {
 };
 
 // typings/components/specs.ts
-export type FeatureStatus = "yes" | "partial" | "no";
+export type FeatureStatus = 'yes' | 'partial' | 'no';
 export type Feature = { label: string; status: FeatureStatus };
-export type Competitor = { name: string; highlighted?: boolean; features: Feature[] };
+export type Competitor = {
+  name: string;
+  highlighted?: boolean;
+  features: Feature[];
+};
 export type SpecsProps = {
   label?: string;
   title?: string;
@@ -161,16 +187,36 @@ export type SpecsProps = {
 };
 
 // typings/components/testimonial.ts
-export type TestimonialProps = { image?: ImageAsset; quote?: string; author?: string; role?: string };
+export type TestimonialProps = {
+  image?: ImageAsset;
+  quote?: string;
+  author?: string;
+  role?: string;
+};
 
 // typings/components/how-to.ts
-export type HowToProps = { title?: string; ctaLabel?: string; steps?: Step[]; image?: ImageAsset };
+export type HowToProps = {
+  title?: string;
+  ctaLabel?: string;
+  steps?: Step[];
+  image?: ImageAsset;
+};
 
 // typings/components/contact.ts
-export type ContactProps = { title?: string; description?: string; ctaLabel?: string; ctaHref?: string };
+export type ContactProps = {
+  title?: string;
+  description?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+};
 
 // typings/components/footer.ts
-export type FooterProps = { logo?: ImageAsset; links?: NavLink[]; year?: number; copyright?: string };
+export type FooterProps = {
+  logo?: ImageAsset;
+  links?: NavLink[];
+  year?: number;
+  copyright?: string;
+};
 ```
 
 Patrón de uso de los valores por defecto:
@@ -239,13 +285,13 @@ export const Benefits = ({ items = BENEFITS_DEFAULTS.items, ...rest }: BenefitsP
 
 ## Risks
 
-| Risk | Mitigation |
-| --- | --- |
-| Licencia de los assets de la plantilla Figma | Usarlos solo como demo y reemplazarlos por assets propios en producción. |
-| Al mover `map.tsx` pueden quedar imports rotos | `pnpm build` lo detecta; hoy solo lo importa `home.tsx`. |
-| Las reglas actuales de `index.css` rompen el layout | Se limpian en el paso 3. |
-| Pequeñas diferencias de espaciado frente al original | Revisión visual en 3 breakpoints (paso 13). |
-| El HTML del sitio duplica el contenido por breakpoint | Se implementa una sola versión responsive. |
+| Risk                                                  | Mitigation                                                               |
+| ----------------------------------------------------- | ------------------------------------------------------------------------ |
+| Licencia de los assets de la plantilla Figma          | Usarlos solo como demo y reemplazarlos por assets propios en producción. |
+| Al mover `map.tsx` pueden quedar imports rotos        | `pnpm build` lo detecta; hoy solo lo importa `home.tsx`.                 |
+| Las reglas actuales de `index.css` rompen el layout   | Se limpian en el paso 3.                                                 |
+| Pequeñas diferencias de espaciado frente al original  | Revisión visual en 3 breakpoints (paso 13).                              |
+| El HTML del sitio duplica el contenido por breakpoint | Se implementa una sola versión responsive.                               |
 
 ## What is **not** in this spec
 

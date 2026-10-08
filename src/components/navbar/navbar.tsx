@@ -1,11 +1,18 @@
-import { useState } from "react";
-import menuIcon from "@/assets/landing/icon-menu.svg";
-import { Button } from "@/components/ui/button";
-import type { NavbarProps } from "@/typings/components/navbar";
-import { NAVBAR_DEFAULTS } from "./navbar.data";
+import { useState } from 'react';
+
+import menuIcon from '@/assets/landing/icon-menu.svg';
+import { Button } from '@/components/ui/button';
+import type { NavbarProps } from '@/typings/components/navbar';
+
+import { NAVBAR_DEFAULTS } from './navbar.data';
 
 export const Navbar = (props: NavbarProps) => {
-  const { logo = NAVBAR_DEFAULTS.logo, links = NAVBAR_DEFAULTS.links, ctaLabel = NAVBAR_DEFAULTS.ctaLabel, ctaHref = NAVBAR_DEFAULTS.ctaHref } = props;
+  const {
+    logo = NAVBAR_DEFAULTS.logo,
+    links = NAVBAR_DEFAULTS.links,
+    ctaLabel = NAVBAR_DEFAULTS.ctaLabel,
+    ctaHref = NAVBAR_DEFAULTS.ctaHref,
+  } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,7 +21,12 @@ export const Navbar = (props: NavbarProps) => {
         aria-label="Main navigation"
         className="relative mx-auto flex min-h-[88px] max-w-[1200px] items-center justify-between px-6 md:min-h-[148px] md:px-10"
       >
-        <a href="#top" aria-label="Area home" onClick={() => setIsOpen(false)} className="shrink-0">
+        <a
+          href="#top"
+          aria-label="Area home"
+          onClick={() => setIsOpen(false)}
+          className="shrink-0"
+        >
           <img src={logo.src} alt={logo.alt} className="h-9 w-auto" />
         </a>
 
@@ -36,7 +48,7 @@ export const Navbar = (props: NavbarProps) => {
 
         <button
           type="button"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsOpen((open) => !open)}

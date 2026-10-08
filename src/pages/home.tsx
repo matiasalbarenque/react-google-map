@@ -1,14 +1,14 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { TrustedBy } from "@/components/trusted-by";
-import { Benefits } from "@/components/benefits";
-import { BigPicture } from "@/components/big-picture";
-import { Specs } from "@/components/specs";
-import { Testimonial } from "@/components/testimonial";
-import { HowTo } from "@/components/how-to";
-import { Location } from "@/components/location";
-import { Contact } from "@/components/contact";
-import { Footer } from "@/components/footer";
+import { Benefits } from '@/components/benefits';
+import { BigPicture } from '@/components/big-picture';
+import { Contact } from '@/components/contact';
+import { Footer } from '@/components/footer';
+import { Hero } from '@/components/hero';
+import { HowTo } from '@/components/how-to';
+import { Location } from '@/components/location';
+import { Navbar } from '@/components/navbar';
+import { Specs } from '@/components/specs';
+import { Testimonial } from '@/components/testimonial';
+import { TrustedBy } from '@/components/trusted-by';
 
 export const HomePage = () => (
   <>

@@ -29,6 +29,8 @@ VITE_GOOGLE_MAPS_MAP_ID="your-map-id"
 pnpm dev              # dev server
 pnpm build            # typecheck (tsc -b) + Vite build
 pnpm lint             # oxlint
+pnpm format           # format files with oxfmt
+pnpm format:check     # check formatting without changing files
 pnpm storybook        # Storybook at http://localhost:6006
 pnpm build-storybook  # static Storybook build
 ```
@@ -38,15 +40,15 @@ pnpm build-storybook  # static Storybook build
 The `APIProvider` is already mounted in `src/main.tsx`. To render a map with custom markers:
 
 ```tsx
-import { Map } from "@/components/map";
+import { Map } from '@/components/map';
 
 export const MySection = () => (
   <Map
     center={{ lat: -34.6037, lng: -58.3816 }}
     zoom={12}
     markers={[
-      { id: "palermo", position: { lat: -34.5889, lng: -58.4306 } },
-      { id: "san-telmo", position: { lat: -34.6212, lng: -58.3731 } },
+      { id: 'palermo', position: { lat: -34.5889, lng: -58.4306 } },
+      { id: 'san-telmo', position: { lat: -34.6212, lng: -58.3731 } },
     ]}
   />
 );

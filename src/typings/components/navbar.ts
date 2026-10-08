@@ -1,4 +1,4 @@
-import type { ImageAsset, NavLink } from "./shared";
+import type { ImageAsset, NavLink } from './shared';
 
 export type NavbarProps = {
   logo?: ImageAsset;
