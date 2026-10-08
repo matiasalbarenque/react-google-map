@@ -1,6 +1,6 @@
 # SPEC 05 — Ejemplo básico de Interactions para Button
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 04
 > **Date:** 2026-10-08
 > **Objective:** Agregar una story de Button que simule un clic y verifique el foco mediante Interactions integrado en Storybook 10.
