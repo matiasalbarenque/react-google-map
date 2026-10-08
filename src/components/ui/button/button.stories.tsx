@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect } from 'storybook/test';
 
 import { Button } from '@/components/ui/button';
 import type { ButtonProps } from '@/typings/components/ui/button';
@@ -40,5 +41,21 @@ export const AsLink: Story = {
     variant: 'primary',
     href: 'https://example.com',
     children: 'AsLink',
+  },
+};
+
+export const InteractionExample: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Interaction Example',
+  },
+  play: async ({ canvas, userEvent }) => {
+    // Find the button by its accessible name and verify it is visible.
+    const button = canvas.getByRole('button', { name: 'Interaction Example' });
+    await expect(button).toBeVisible();
+
+    // Click the button and verify it receives focus.
+    await userEvent.click(button);
+    await expect(button).toHaveFocus();
   },
 };
